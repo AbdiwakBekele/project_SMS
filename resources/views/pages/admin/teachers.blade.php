@@ -1,4 +1,8 @@
 @extends('partials.home')
+@section('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+@endsection
 @section('section')
 
 <div class="d-flex justify-content-center align-items-center">
@@ -65,11 +69,29 @@
         <div class="row">
         <div class="form-group col-6">
         <label for="phone">Qualification</label>
-        <select class="form-select" id="multiple-select-field" data-placeholder="Choose anything" multiple>
-  <option value="1">BA Degree</option>
-  <option value="2">BS Degree</option>
-  <option value="3">MS Degree</option>
-  <option value="4">MA degree</option>
+   
+        <select class="form-control selectpicker" id="multiselect" multiple data-live-search="true">
+  
+  <option class="br-primary" value="2">BA Degree</option>
+
+  <option class="br-primary" value="2">BS Degree</option>
+  <option class="br-primary" value="3">MS Degree</option>
+  <option class="br-primary" value="4">MA degree</option>
+  <option value="5">other</option>
+</select></div>
+<div class="form-group col-6">
+        <label for="phone">Subjects Taught</label>
+   
+        <select class="form-control selectpicker" id="multiselect" multiple data-live-search="true">
+  
+  <option class="br-primary" value="2">Math</option>
+
+  <option class="br-primary" value="2">English</option>
+  <option class="br-primary" value="3">Amharic</option>
+  <option class="br-primary" value="4">Chemistry</option>
+  <option class="br-primary" value="4">Physics</option>
+
+
   <option value="5">other</option>
 </select></div>
         </div>
@@ -81,6 +103,18 @@
             <label for="confirm">Confirm Password<span class="text-danger">*</span></label>
             <input type="password" class="form-control" id="confirm" placeholder="Password">
         </div>
+        <div class="form-group ">
+        <label for="phone">Roles</label>
+   
+        <select class="form-control selectpicker" id="multiselect" multiple data-live-search="true">
+  
+  <option class="br-primary" value="2">Admin</option>
+
+  <option class="br-primary" value="2">Teacher</option>
+  <option class="br-primary" value="3">School Dean Office</option>
+  <option class="br-primary" value="4"></option>
+  <option value="5">other</option>
+</select></div>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -88,4 +122,8 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+@endsection
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
 @endsection
