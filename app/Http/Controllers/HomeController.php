@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.register_user');
+        return view('pages.admin.teachers');
     }
 }

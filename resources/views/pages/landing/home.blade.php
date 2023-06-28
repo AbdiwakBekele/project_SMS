@@ -315,7 +315,7 @@
       <div class="col-4">
 <img src="SM_frontend/img/school.jpg" alt="" class="aboutus mt-5">
       </div>
-      <div class="col-8 d-flex align-items-center justify-content-center imageabout flex-column  mt-5" style="">
+      <div class="col-8 d-flex align-items-center justify-content-center imageabout flex-column  mt-5" >
         <h2 class=" w-100"> About-us </h2> 
 
         Bole Community School is a coeducational school with a roll of 
