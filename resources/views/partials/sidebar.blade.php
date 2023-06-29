@@ -3,10 +3,7 @@
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-    <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
-    </div>
-    <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+    <img src="{{asset('SM_frontend/img/download.png')}}" alt="" class="w-100">
 </a>
 
 <!-- Divider -->
@@ -19,35 +16,78 @@
         <span>Dashboard</span></a>
 </li>
 
-<!-- Divider -->
-<hr class="sidebar-divider">
-
-<!-- Heading -->
-<div class="sidebar-heading">
-    Interface
-</div>
-
-<!-- Nav Item - Pages Collapse Menu -->
-<!-- <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>Components</span>
-    </a>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-        </div>
-    </div>
-</li> -->
 
 <!-- Nav Item - Utilities Collapse Menu -->
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Students</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Student</a>
+                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> View Student</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseteacher"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-chalkboard-teacher " ></i>
+                    <span>Teachers</span>
+                </a>
+                <div id="collapseteacher" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Teacher</a>
+                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> View Teachers</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseparent"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-user" ></i>
+                    <span>Parents</span>
+                </a>
+                <div id="collapseparent" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Parent</a>
+                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> View Parents</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseclass"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-bookmark" ></i>
+                    <span>Classes</span>
+                </a>
+                <div id="collapseclass" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Manage Classes</a>
+                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> Manage Subjects</a>
+                    </div>
+                </div>
+            </li>
+            
+
+
 <li class="nav-item">
     <a class="nav-link" href="charts.html">
-        <i class="fas fa-fw fa-chart-area"></i>
-        <span>Add Student</span></a>
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Academic Setting</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="charts.html">
+        <i class="fas fa-fw fa-question"></i>
+        <span>Exam Routine and Result</span></a>
 </li>
 
 <!-- Divider -->
