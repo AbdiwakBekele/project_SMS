@@ -1,13 +1,14 @@
-<table id="example" class="table table-striped" style="width:100%">
-        <thead>
+<table id="example" class="table  align-middle mb-0 bg-white" style="width:100%">
+        <thead class="bg-light">
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Class</th>
+                <th>Home Teacher</th>
+                <th>Gender</th>
+                
                 <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-                <th ></th>
+                <th class="custom-column">MORE</th>
                 
             </tr>
         </thead>
@@ -19,7 +20,7 @@
                 <td>61</td>
                 <td>2011-04-25</td>
                 <td>$320,800</td>
-                <td>   <ul class="list-inline m-0">
+                <td class="custom-column">   <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
                                                 </li>
@@ -37,7 +38,7 @@
                 <td>63</td>
                 <td>2011-07-25</td>
                 <td>$170,750</td>
-                <td>   <ul class="list-inline m-0">
+                <td class="custom-column">   <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
                                                 </li>
@@ -55,7 +56,7 @@
                 <td>66</td>
                 <td>2009-01-12</td>
                 <td>$86,000</td>
-                <td>   <ul class="list-inline m-0">
+                <td class="custom-column">   <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
                                                 </li>
@@ -73,7 +74,7 @@
                 <td>22</td>
                 <td>2012-03-29</td>
                 <td>$433,060</td>
-                <td>   <ul class="list-inline m-0">
+                <td class="custom-column">   <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
                                                 </li>
@@ -91,7 +92,7 @@
                 <td>33</td>
                 <td>2008-11-28</td>
                 <td>$162,700</td>
-                <td>   <ul class="list-inline m-0">
+                <td class="custom-column">   <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
                                                 </li>
@@ -127,7 +128,7 @@
                 <td>59</td>
                 <td>2012-08-06</td>
                 <td>$137,500</td>
-                <td>   <ul class="list-inline m-0">
+                <td class="custom-column">   <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
                                                 </li>
@@ -145,7 +146,7 @@
                 <td>55</td>
                 <td>2010-10-14</td>
                 <td>$327,900</td>
-                <td>   <ul class="list-inline m-0">
+                <td class="custom-column">   <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
                                                 </li>
@@ -551,13 +552,13 @@
         </tbody> -->
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
+            <th>Full Name</th>
+                <th>Email</th>
+                <th>Class</th>
+                <th>Home Teacher</th>
+                <th>Gender</th>
                 <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-                <th ></th>
+                <th class="custom-column">MORE</th>
                 
             </tr>
         </tfoot>

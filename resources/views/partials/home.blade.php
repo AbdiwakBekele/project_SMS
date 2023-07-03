@@ -22,7 +22,16 @@
     <!-- Custom styles for this template-->
     <link href="template/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.min.css" >
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap');
+.title{
+    font-family: 'Ysabeau SC', sans-serif;
 
+}
+html>*{
+    color: black !important;
+}
+</style>
 </head>
 
 <body id="page-top">

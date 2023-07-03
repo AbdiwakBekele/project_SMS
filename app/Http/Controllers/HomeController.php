@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.role.updaterole');
+        return view('pages.admin.staff.stafflist');
     }
 }
