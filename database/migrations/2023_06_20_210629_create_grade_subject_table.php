@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('grade_subject', function (Blueprint $table) {
             $table->id();
-            $table->integer('grade_id')->unsigned();
-            $table->integer('subject_id')->unsigned();
-            $table->integer('user_id')->unsigned();
-            $table->foreign('grade-id')->references('id')->on('grades')->onDelete('cascade');
+            $table->unsignedBigInteger('grade_id');
+            $table->unsignedBigInteger('subject_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
             $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-         
+
+
             $table->timestamps();
         });
     }

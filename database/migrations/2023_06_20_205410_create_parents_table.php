@@ -19,7 +19,9 @@ return new class extends Migration
             $table->integer('phone_number');
             $table->integer('phone_number2');
             $table->string('address');
-            
+            $table->string('city');
+            $table->string('state');
+
             $table->timestamps();
         });
     }

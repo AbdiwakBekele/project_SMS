@@ -4,11 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Permission\Traits\HasRoles;
 
-class Parent extends Model
+class Parents extends Model
 {
-    use HasFactory;
+    use HasFactory,HasRoles;
     protected $table = 'parents';
+    protected $guard_name = 'web';
 
     protected $fillable = [
         'parents_name',
@@ -17,10 +19,13 @@ class Parent extends Model
         'phone_number',
         'phone_number2',
         'address',
+        'city',
+        'state',
        
     ];
     public function students()
     {
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Student::class,'parent_id','id');
     }
 }
+
