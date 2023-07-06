@@ -1,4 +1,4 @@
-<table id="example" class="table table-responsive align-middle mb-0 bg-white" >
+<table id="example" class="table responsive align-middle mb-0 bg-white" >
         <thead class="bg-light">
             <tr>
                 <th>Full Name</th>

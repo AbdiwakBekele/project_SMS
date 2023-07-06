@@ -1,6 +1,5 @@
 @extends('partials.home')
 @section('styles')
-
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
 <link href="
@@ -8,7 +7,10 @@ https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.
 " rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" > -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" >
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap');
@@ -20,7 +22,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.
 </style>
 @endsection
 @section('section')
-
+<div class="container-fluid">
 <div class="container d-flex justify-content-center">
     <div class="title h1"> Student List</div>
 </div>
@@ -49,15 +51,12 @@ https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.
     </form>
 
 </div>
-<div class="">@include('pages.admin.example')</div>
-
+<div class="row">@include('pages.admin.example')</div>
+</div>
 @endsection
 @section('scripts')
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="
-https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/js/bootstrap-select.min.js
-"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -73,7 +72,8 @@ https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/js/bootstrap-select.min.js
 
             this.api()
                 .columns()
-                .every(function() {
+                .every(function(index) {
+                    if((index===0) && (index===2)){
                     var column = this;
                     var title = column.footer().textContent;
 
@@ -84,19 +84,19 @@ https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/js/bootstrap-select.min.js
                             if (column.search() !== this.value) {
                                 column.search(this.value).draw();
                             }
-                        });
+                        });}
                 });
-        },
-        columnDefs: [{
-            targets: 6, // Index of the column (0-based)
-            sortable: false, // Disable sorting for this column
-            searchable: false // Disable searching for this column
-        }],
-        columnDefs: [{
-            targets: [4], // Index of the column (0-based)
-            sortable: false, // Disable sorting for this column
-            searchable: false // Disable searching for this column
-        }]
+        },  dom: 'Bfrtip',
+                responsive: true,
+                pageLength: 25,
+                // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+
+        
+  
     });
     $(function() {
         $('[data-toggle="tooltip"]').tooltip();

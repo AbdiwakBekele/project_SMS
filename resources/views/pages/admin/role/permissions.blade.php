@@ -21,7 +21,7 @@
                     Permission must be added
                 </div>
                 <div class="col-sm-2 mt-1">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                   <a href="{{url('updatepermission')}}"> <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
                 </div>
             </div>
         </form>

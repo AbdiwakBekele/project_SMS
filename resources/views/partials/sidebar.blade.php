@@ -11,7 +11,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{url('home')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -29,8 +29,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Student</a>
-                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> View Student</a>
+                        <a class="collapse-item" href="{{url('registerstudent')}}"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Student</a>
+                        <a class="collapse-item" href="{{url('studentlist')}}"><i class="fa fa-info-circle" aria-hidden="true"></i> View Student</a>
+                        <a class="collapse-item" href="{{url('Attendancereport')}}"><i class="fa fa-calendar" aria-hidden="true"></i> Attendance Report</a>
+
                     </div>
                 </div>
             </li>
@@ -38,13 +40,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseteacher"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-chalkboard-teacher " ></i>
-                    <span>Teachers</span>
+                    <span>Staff</span>
                 </a>
                 <div id="collapseteacher" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Teacher</a>
-                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> View Teachers</a>
+                        <a class="collapse-item" href="{{url('registerstaff')}}"><i class="fa fa-plus-square" aria-hidden="true"></i> Register New Staff </a>
+                        <a class="collapse-item" href="{{url('stafflist')}}"><i class="fa fa-info-circle" aria-hidden="true"></i> Staff List</a>
                     </div>
                 </div>
             </li>
@@ -57,8 +59,8 @@
                 <div id="collapseparent" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Parent</a>
-                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> View Parents</a>
+                        <a class="collapse-item" href="{{url('registerparent')}}"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Parent</a>
+                        <a class="collapse-item" href="{{url('parentlist')}}"><i class="fa fa-info-circle" aria-hidden="true"></i> View Parents</a>
                     </div>
                 </div>
             </li>
@@ -66,13 +68,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseclass"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-bookmark" ></i>
-                    <span>Classes</span>
+                    <span>Role and Permission</span>
                 </a>
                 <div id="collapseclass" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <a class="collapse-item" href="buttons.html"><i class="fa fa-plus-square" aria-hidden="true"></i> Manage Classes</a>
-                        <a class="collapse-item" href="cards.html"><i class="fa fa-info-circle" aria-hidden="true"></i> Manage Subjects</a>
+                        <a class="collapse-item" href="{{url('roles')}}"><i class="fa fa-plus-square" aria-hidden="true"></i>Roles</a>
+                        <a class="collapse-item" href="{{url('permissions')}}"><i class="fa fa-info-circle" aria-hidden="true"></i> Permissions</a>
                     </div>
                 </div>
             </li>

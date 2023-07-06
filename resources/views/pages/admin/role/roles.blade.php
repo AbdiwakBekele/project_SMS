@@ -6,7 +6,7 @@
 @endsection
 @section('section')
 <div class="d-flex justify-content-end">
-    <button class="btn btn-success me-5">Create Role</button>
+<a href="{{url('addrole')}}"> <button class="btn btn-success me-5">Create Role</button></a>
 </div>
 <div class="d-flex justify-content-center">
     <div class="h1">Roles</div>
@@ -27,7 +27,7 @@
       <td>Otto</td>
       <td><ul class="list-inline m-0">
       <li class="list-inline-item">
-                                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                                              <a href="{{url('updaterole')}}">      <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button></a>
                                                 </li>
                                                 <li class="list-inline-item">
                                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></li>

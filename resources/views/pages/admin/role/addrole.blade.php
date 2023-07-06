@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label for="id1">Role Name</label>
                 <input class="form-control" type="text" 
-                    id="id1" placeholder="Enter your User Name">
+                    id="id1" placeholder="Role Name">
             </div>
             <div class="form-group">
                 <label for="id2">Permissions</label>
