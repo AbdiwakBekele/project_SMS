@@ -3,6 +3,8 @@
 /public/build
 /public/hot
 /public/storage
+/public/template/vendor/bootstrap
+/public/template/vendor/fontawesome-free
 /storage/*.key
 /vendor
 .env

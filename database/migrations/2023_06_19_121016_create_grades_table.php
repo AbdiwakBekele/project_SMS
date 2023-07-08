@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('grade_name');
             $table->integer('section_id')->unsigned();
-            $table->foreign('section_id')->references('id')->on('grades')->onDelete('cascade');
+            // $table->foreign('section_id')->references('id')->on('grades')->onDelete('cascade');
             $table->timestamps();
         });
     }

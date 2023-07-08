@@ -16,9 +16,9 @@ return new class extends Migration
             $table->integer('grade_id')->unsigned();
             $table->integer('subject_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->foreign('grade-id')->references('id')->on('grades')->onDelete('cascade');
-            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->foreign('grade-id')->references('id')->on('grades')->onDelete('cascade');
+            // $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
          
             $table->timestamps();
         });
