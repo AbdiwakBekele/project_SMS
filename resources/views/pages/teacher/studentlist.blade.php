@@ -1,5 +1,6 @@
 
-@extends('partials.home')
+@extends('pages.admin.homeside')
+
 @section('styles')
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
