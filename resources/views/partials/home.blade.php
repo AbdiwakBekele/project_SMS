@@ -40,7 +40,9 @@ html>*{
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-      @include('partials.sidebar')
+  
+      @yield('sidebar')
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 

@@ -15,6 +15,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@material/data-table": "^14.0.0",
         "bootstrap-multiselect": "^1.1.0",
         "mdbootstrap": "^4.20.0"
     }

@@ -21,10 +21,27 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+
+
+     public function index()
+     {
+         return view('pages.admin.dashboard');
+     }
+    // public function index()
+    // {
+    //     return view('pages.student.class');
+    // }
+    public function grades()
     {
-        return view('pages.teacher.studentgrades');
+        return view('pages.student.Mygrades');
     }
+    public function attendances()
+    {
+        return view('pages.student.attendance');
+    }
+    // student controller '
+
+
     // public function index()
     // {
     //     return view('pages.admin.dashboard');

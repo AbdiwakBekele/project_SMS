@@ -19,7 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/mygrades', [App\Http\Controllers\HomeController::class, 'grades'])->name('mygrades');
+Route::get('/myattendance', [App\Http\Controllers\HomeController::class, 'attendances'])->name('myattendance');
+
+
 // parent routes
 Route::get('/parentlist', [App\Http\Controllers\HomeController::class, 'parentlist']);
 Route::get('/registerparent', [App\Http\Controllers\HomeController::class, 'addparent']);
