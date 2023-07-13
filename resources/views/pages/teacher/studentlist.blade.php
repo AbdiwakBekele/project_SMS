@@ -1,5 +1,5 @@
 
-@extends('pages.admin.homeside')
+@extends('pages.teacher.homeside')
 
 @section('styles')
 

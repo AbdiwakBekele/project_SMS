@@ -23,14 +23,36 @@ class HomeController extends Controller
      */
 
 
-     public function index()
-     {
-         return view('pages.admin.dashboard');
+    //  public function index()
+    //  {
+    //      return view('pages.parent.children');
+    //  }
+    // teacher
+    
+    public function teacherprofile(){
+        return view('pages.teacher.home');
+     }
+     public function homeattendance(){
+        return view('pages.teacher.homeattendance');
+     }
+     public function mystudent(){
+        return view('pages.teacher.studentlist');
+     }
+     public function studentgrade(){
+        return view('pages.teacher.studentgrades');
+     }
+     public function childgrade(){
+        return view('pages.parent.children_grade');
+     }
+
+     public  function index(){
+return view('pages.teacher.class');
      }
     // public function index()
     // {
-    //     return view('pages.student.class');
+    //     return view('pages.teacher.class');
     // }
+
     public function grades()
     {
         return view('pages.student.Mygrades');

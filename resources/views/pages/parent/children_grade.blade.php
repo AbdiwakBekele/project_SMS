@@ -26,7 +26,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{url('children')}}">Children</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item active" aria-current="page">Kiya Tilahun</li>
   </ol>
 </nav>
 <div class="">

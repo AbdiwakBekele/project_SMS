@@ -10,7 +10,12 @@
 <tbody>
 <tr>
     <td>Erestu Yerdawe</td>
-    <td><a href=""><button class="btn btn-outline-primary">See Result</button></a></td>
+    <td><a href="{{url('childgrade')}}"><button class="btn btn-outline-primary">See Result</button></a></td>
+
+</tr>
+<tr>
+    <td>Kebede Yerdawe</td>
+    <td><a href="{{url('childgrade')}}"><button class="btn btn-outline-primary">See Result</button></a></td>
 
 </tr>
 </tbody>

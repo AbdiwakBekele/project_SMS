@@ -20,15 +20,29 @@
       <!-- Nav Item - Pages Collapse Menu -->
       
             
-
-
-<li class="nav-item  {{ request()->is('home') ? 'active' : '' }}">
+      <li class="nav-item  {{ request()->is('home') ? 'active' : '' }}">
     <a class="nav-link " href="{{url('home')}}">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Class</span></a>
+</li>
+
+<li class="nav-item  {{ request()->is('teacherprofile') ? 'active' : '' }}">
+    <a class="nav-link " href="{{url('teacherprofile')}}">
         <i class="fas fa-fw fa-cog"></i>
         <span>My Profile</span></a>
 </li>
-<li class="nav-item {{ request()->is('mygrades') ? 'active' : '' }}">
-    <a class="nav-link " href="{{url('mygrades')}}">
+<li class="nav-item  {{ request()->is('mystudent') ? 'active' : '' }}">
+    <a class="nav-link " href="{{url('mystudent')}}">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Student List</span></a>
+</li>
+<li class="nav-item  {{ request()->is('studentgrade') ? 'active' : '' }}">
+    <a class="nav-link " href="{{url('studentgrade')}}">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Add Grades</span></a>
+</li>
+<li class="nav-item {{ request()->is('homeattendance') ? 'active' : '' }}">
+    <a class="nav-link " href="{{url('homeattendance')}}">
         <i class="fas fa-fw fa-question"></i>
         <span>Attendance</span></a>
 </li>

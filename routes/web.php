@@ -18,12 +18,22 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+// parent
+Route::get('/childgrade', [App\Http\Controllers\HomeController::class, 'childgrade'])->name('childgrade');
+
+
+// teacher
+Route::get('/teacherprofile', [App\Http\Controllers\HomeController::class, 'teacherprofile'])->name('profile');
+
+Route::get('/homeattendance', [App\Http\Controllers\HomeController::class, 'homeattendance'])->name('homeattendance');
+Route::get('/mystudent', [App\Http\Controllers\HomeController::class, 'mystudent'])->name('mystudent');
+Route::get('/studentgrade', [App\Http\Controllers\HomeController::class, 'studentgrade'])->name('studentgrade');
+
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/mygrades', [App\Http\Controllers\HomeController::class, 'grades'])->name('mygrades');
 Route::get('/myattendance', [App\Http\Controllers\HomeController::class, 'attendances'])->name('myattendance');
-
 
 // parent routes
 Route::get('/parentlist', [App\Http\Controllers\HomeController::class, 'parentlist']);
