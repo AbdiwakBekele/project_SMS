@@ -1,13 +1,17 @@
 <?php
 
+use App\Http\Controllers\Admin\ClassSectionController;
 use App\Http\Controllers\Admin\RoleAndPermissionController;
 use App\Http\Controllers\Parent\ParentRegisterController;
+
 use App\Http\Controllers\ProfileController;
 
 
 // use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserRegisterController;
+use App\Http\Controllers\Subject\SubjectController;
+
 
 
 
@@ -40,6 +44,31 @@ Route::get('/', function () {
 Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function(){
             Route::get('/',[DashboardController::class,'admindashboard'])->name('admindashboard');
             Route::get('/roles',[RoleAndPermissionController::class,'index'])->name('RPmanagement')->middleware('role:admin');
+            
+
+            // Gradesssss
+            Route::get('/classSections',[ClassSectionController::class,'index'])->name('ClassSectionManagement')->middleware('role:admin');
+            Route::get('/addGrades',[ClassSectionController::class,'createGrade'])->name('AddingGrades');
+            Route::post('/grades',[ClassSectionController::class,'storeGrade'])->name('AddGrades');
+            Route::get('grades/{grade_id}/delete',[ClassSectionController::class,'destroyGrade']);
+
+            // subjectssss
+            Route::get('/subjects',[SubjectController::class,'index'])->name('Subject.SubjectManagement');
+            Route::get('/addSubjects',[SubjectController::class,'create'])->name('AddingSubjects');
+
+
+
+
+            // Sectionsssss
+            Route::get('/addSections',[ClassSectionController::class,'createSection'])->name('AddingSections');
+            Route::post('/sections',[ClassSectionController::class,'storeSection'])->name('AddSections');
+            Route::get('sections/{section_id}/delete',[ClassSectionController::class,'destroySection']);
+
+           
+
+
+
+
 
             // Rolessss
             Route::get('/createRoles',[RoleAndPermissionController::class,'createRole'])->name('createRole');

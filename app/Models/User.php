@@ -38,6 +38,18 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function sections()
+    {
+        return $this->hasMany(Section::class,'user_id','id');
+    }
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
+    public function grades()
+    {
+        return $this->belongsToMany(Grade::class);
+    }
 
     /**
      * The attributes that should be cast.
