@@ -3,12 +3,10 @@
         <thead class="bg-light">
              
             <tr>
-            <th>Student Id #</th>
-                
+                <th>Student Id#</th>
                 <th>Full Name</th>
                 <th>Attendance</th>
-           
-                
+                   
             </tr>
         </thead>
         <tbody>
