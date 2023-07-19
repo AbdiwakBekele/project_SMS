@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable,HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -18,8 +19,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'full_name',
         'email',
+        'phone_number',
+        'address',
+        'city',
+        'state',
+        'literacy_level',
         'password',
     ];
 
@@ -32,6 +38,18 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function sections()
+    {
+        return $this->hasMany(Section::class,'user_id','id');
+    }
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
+    public function grades()
+    {
+        return $this->belongsToMany(Grade::class);
+    }
 
     /**
      * The attributes that should be cast.
