@@ -1,14 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-  <a class="link-opacity-10" href="{{route('admin.RPmanagement')}}"> <button type="button" class="btn btn-primary">back</button></a>
+@extends('admin.admin_sidebar')
+
+
+
+@section('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+@endsection
+@section('section')
+<a class="link-opacity-10" href="{{route('admin.RPmanagement')}}"> <button type="button" class="btn btn-primary">back</button></a>
 
     <h1 class="m-3">editing Roles</h1>
     <div class="container m-5">
@@ -69,6 +70,28 @@
 
     </div>
         
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
-</html>
+    @endsection
+    @section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    @endsection
