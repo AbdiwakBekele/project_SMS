@@ -9,10 +9,13 @@
 
 @endsection
 @section('section')
-
-<div class="d-flex justify-content-start p-3 h1">
-    Add Role
-</div> 
+<div class="container">
+<div class="row">
+<div class="col-2">
+    <a href="{{route('admin.RPmanagement')}}"  class="btn btn-primary" data-bs-placement="top" data-toggle="tooltip" title="Go Back"><i class="fa fa-arrow-left"></i></a>
+</div>
+    <div class="title h1 col-10">Create New Role</div>
+</div>
 <div class="container m-5">
   
         {!! Form::open(array('route' => 'admin.creating.roles','method'=>'POST')) !!}
@@ -41,7 +44,7 @@
 </div>
 {!! Form::close() !!}
 </div>
-
+</div>
 
 @endsection
 @section('scripts')

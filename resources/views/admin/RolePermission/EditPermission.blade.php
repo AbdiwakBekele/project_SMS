@@ -9,8 +9,16 @@
 
 @endsection
 @section('section')
-<div class="container">
-<h1 class="m-3">editing Permissions</h1>
+<div class="container-fluid">
+<div class="row m-5 d-flex justify-content-center">
+  
+<div class="col-2">
+    <a href="{{route('admin.RPmanagement')}}"  class="btn btn-primary" data-bs-placement="top" data-toggle="tooltip" title="Go Back"><i class="fa fa-arrow-left"></i></a>
+</div>
+    <div class="title h1 col-10">Edit Permission</div>
+</div>
+</div>
+
     <div class="container m-5">
     <form action="{{url('admin/updatePermission')}}" method="post">
            @csrf
@@ -21,7 +29,7 @@
             <input type="text" name="name"  class="form-control" id="exampleInputPassword1"  value="{{ $permission->name }}">
             </div>
             
-            <button type="submit" class="btn btn-primary mt-4">Save</button>
+            <button type="submit" class="btn btn-primary mt-2">Save Changes</button>
         </form>
     </div>
     </div>

@@ -31,14 +31,17 @@
                     </div>
                 </div>
 
+                <div class="row"><div class="d-flex justify-content-end mb-4">    <a class="link-opacity-10" href="{{route('admin.Parents.RegisterParents')}}"> <button type="button" class="btn btn-primary">Register New Parent</button></a></div></div>
 
-                <a class="link-opacity-10" href="{{route('admin.Parents.RegisterParents')}}"> <button type="button" class="btn btn-primary">Register New Parents</button></a>
+                
                 
 
                 @if ($message = Session::get('success'))
-                <div class="alert alert-success">
-                <p>{{ $message }}</p>
-                </div>
+             
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong> {{ $message }}</strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">X</button>
+</div>
                 @endif
 
 
@@ -60,7 +63,7 @@
 <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 <script>
     $('#example').DataTable({
-
+        "lengthChange": false,
 
         initComplete: function() {
 

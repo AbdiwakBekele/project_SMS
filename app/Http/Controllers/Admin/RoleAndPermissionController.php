@@ -91,7 +91,9 @@ class RoleAndPermissionController extends Controller
         $permission = Permission::find($request->permission);
         $permission->update($validated);
         
-        return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        // return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        return redirect()->route('admin.RPmanagement');
+
     }
 
     public function updateRole(Request $request)
@@ -100,7 +102,10 @@ class RoleAndPermissionController extends Controller
         $role = Role::find($request->role);
         $role->update($validated);
         
-        return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        // return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        return redirect()->route('admin.RPmanagement');
+
+
         
     }
     /**

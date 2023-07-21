@@ -19,14 +19,14 @@
         <span>Dashboard</span></a>
 </li>
 
-<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.RPmanagement', 'admin.createRole', 'admin.createPermission']) ? 'active' : '' }}">
+<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.RPmanagement', 'admin.createRole', 'admin.createPermission','admin.editrole','admin.editpermission']) ? 'active' : '' }}">
 
     <a class="nav-link" href="{{route('admin.RPmanagement')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Roles and Permissions</span></a>
 </li>
+<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Parents.ManageParents', 'admin.Parents.RegisterParents']) ? 'active' : '' }} ">
 
-<li class="nav-item {{ request()->route()->named('admin.Parents.ManageParents') ? 'active' : '' }}">
     <a class="nav-link" href="{{route('admin.Parents.ManageParents')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Parent Management</span></a>
@@ -37,7 +37,7 @@
         <span>Staff Management</span></a>
 </li>
 
-<li class="nav-item {{ in_array(request()->route()->getName(), ['aadmin.Students.ManageStudents', 'admin.Students.RegisterStudents']) ? 'active' : '' }} ">
+<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Students.ManageStudents', 'admin.Students.RegisterStudents']) ? 'active' : '' }} ">
     <a class="nav-link" href="{{route('admin.Students.ManageStudents')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Student Management</span></a>

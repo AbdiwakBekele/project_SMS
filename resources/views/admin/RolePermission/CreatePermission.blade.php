@@ -12,7 +12,12 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            Add new Permission
+        <div class="row">
+<div class="col-2">
+    <a href="{{route('admin.RPmanagement')}}"  class="btn btn-primary" data-bs-placement="top" data-toggle="tooltip" title="Go Back"><i class="fa fa-arrow-left"></i></a>
+</div>
+    <div class="title h1 col-10">Add new Permission</div>
+</div>
         </div>
         <form action="{{url('admin/permission')}}"  method="post" class="needs-validation" novalidate>
            @csrf
@@ -48,10 +53,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @php
+          $percount=1;
+          @endphp
                     @foreach($permissions as $permission)
                         <tr>
                       
-                            <th scope="row">{{$permission->id}}</th>
+                            <th scope="row">{{$percount++}}</th>
                             <td>{{$permission->name}}</td>
                             <td>
                                 <ul class="list-inline m-0">
@@ -63,7 +71,7 @@
                                     </li> -->
 
                                     <li class="list-inline-item">
-                                       <a href="{{url('editPermission/' . $permission->id)}}"> <button class="btn btn-success btn-sm rounded-0" type="button"  data-bs-placement="top" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></button></a>
+                                       <a href="{{ route('admin.editpermission', ['id' => $permission->id])}}"> <button class="btn btn-success btn-sm rounded-0" type="button"  data-bs-placement="top" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></button></a>
                                     </li>
                                     <li class="list-inline-item">
                                       <a href="{{url('admin/Permissions/'.$permission->id.'/delete')}}">  <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></a>
