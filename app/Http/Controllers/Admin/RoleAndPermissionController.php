@@ -15,7 +15,10 @@ class RoleAndPermissionController extends Controller
     public function index()
     {
         $roles=Role::WhereNotIn('name',['admin'])->get();
+        // $rolcount=count($roles);
         $permissions=Permission::all();
+        // $percount=count($permissions);
+
         return view('admin.RolePermission.RolePermissionManagement', compact('roles','permissions'));
     }
 
@@ -30,7 +33,9 @@ class RoleAndPermissionController extends Controller
     public function createPermission()
     {
         //
-        return view('admin.RolePermission.CreatePermission');
+        $permissions=Permission::all();
+
+        return view('admin.RolePermission.CreatePermission',compact('permissions'));
     }
 
     /**
@@ -44,13 +49,16 @@ class RoleAndPermissionController extends Controller
         ]);
        $role= Role::create(['name'=>$request->input('name')]);
        $role->syncPermissions($request->input('permission'));
-        return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        // return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        return redirect()->route('admin.RPmanagement');
     }
     public function permissionStore(Request $request)
     {
         $validated=$request->validate(['name'=>['required','min:3']]);
         Permission::create($validated);
-        return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        // return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        return redirect()->route('admin.RPmanagement');
+
     }
 
     /**
@@ -83,7 +91,9 @@ class RoleAndPermissionController extends Controller
         $permission = Permission::find($request->permission);
         $permission->update($validated);
         
-        return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        // return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        return redirect()->route('admin.RPmanagement');
+
     }
 
     public function updateRole(Request $request)
@@ -92,7 +102,11 @@ class RoleAndPermissionController extends Controller
         $role = Role::find($request->role);
         $role->update($validated);
         
-        return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        // return redirect()->route('admin.RolePermission.RolePermissionManagement');
+        return redirect()->route('admin.RPmanagement');
+
+
+        
     }
     /**
      * Remove the specified resource from storage.
