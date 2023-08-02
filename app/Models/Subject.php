@@ -14,12 +14,18 @@ class Subject extends Model
          'subject_name',
          'subject_code',
     ];
-    // public function grades()
-    // {
-    //     return $this->belongsToMany(Grade::class);
-    // }
-    public function users()
+   
+    
+  
+    public function subjects()
+    {
+        return $this->belongsTo(GradeSubject::class, 'subject_id','id');
+    }
+   
+    
+    public function teacher()
     {
         return $this->belongsToMany(User::class);
     }
+   
 }

@@ -21,8 +21,11 @@ class Grade extends Model
     // {
     //     return $this->belongsToMany(Subject::class);
     // }
-    public function users()
-    {
-        return $this->belongsToMany(User::class);
-    }
+    
+    // public function gradeSubject()
+    // {
+    //     return $this->hasMany(GradeSubject::class, 'grade_id');
+    // }
+
+    
 }

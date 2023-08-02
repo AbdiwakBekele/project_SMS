@@ -8,10 +8,10 @@
   </head>
   <body>
   <div class="row ms-5 col-6 mt-5">
-  <a class="link-opacity-10 mt-3" href="{{route('admin.AddingSubjects')}}"> <button type="button" class="btn btn-primary">Add Subjects</button></a>
-  <a class="link-opacity-10 mt-3" href=""> <button type="button" class="btn btn-primary">Assign Subject to Class</button></a>
+  <a class="link-opacity-10 mt-3" href="{{route('admin.subjects.create')}}"> <button type="button" class="btn btn-primary">Add Subjects</button></a>
+  <a class="link-opacity-10 mt-3" href="{{route('admin.subjects.AssignForClass')}}"> <button type="button" class="btn btn-primary">Assign Subject to Class</button></a>
 
-  <a class="link-opacity-10 mt-3" href=""> <button type="button" class="btn btn-primary">Assign Subject to Teachers</button></a>
+  <a class="link-opacity-10 mt-3" href="{{route('admin.subjects.AssignForTeacher')}}"> <button type="button" class="btn btn-primary">Assign Subject to Teachers</button></a>
 
         <table class="table border border-2 mt-3">
           <thead>

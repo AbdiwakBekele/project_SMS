@@ -5,22 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class GradeSubject extends Model
+class UserSubjectGrade extends Model
 {
     use HasFactory;
-
     protected $guard_name = 'web';
 
-    protected $table = 'grade_subject';
+    protected $table = 'user_subject_grade';
     protected $fillable=[
-        'grade_id',
+        'user_id',
         'subject_id',
+        'grade_id',
+       
     ];
-
-
-    public function gradeSubject()
-    {
-        return $this->hasMany(Subject::class,'subject_id','id');
-    }
-  
 }
