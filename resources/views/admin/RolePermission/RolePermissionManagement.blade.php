@@ -45,7 +45,7 @@
 
                 <td>{{$role->name}}</td>
                 <td>
-                  <a href="{{ route('admin.editrole', ['id' => $role->id])}}"> Edit</a>
+                  <a href="{{route('admin.editrole', ['id' => $role->id])}}"> Edit</a>
                 </td>
                 <td>
                   <a href="{{url('admin/Roles/'.$role->id.'/delete')}}"> Delete</a>

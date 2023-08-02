@@ -9,7 +9,7 @@
   <body>
     <h1 class="m-3">Adding Subjects</h1>
     <div class="container m-5">
-    <form action="" method="post">
+    <form action="{{route('admin.AddSubjects')}}" method="post">
             @csrf
             <div class="form-group">
             <label for="exampleInputPassword1">Subject Name</label>
@@ -23,6 +23,10 @@
             <button type="submit" class="btn btn-primary mt-4">Add</button>
         </form>
     </div>
+
+
+
+    
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>

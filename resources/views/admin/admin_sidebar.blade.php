@@ -42,6 +42,16 @@
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Student Management</span></a>
 </li>
+<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Students.ManageStudents', 'admin.Students.RegisterStudents']) ? 'active' : '' }} ">
+    <a class="nav-link" href="{{route('admin.ClassSection.ClassSectionManagement')}}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>ClassSection Management</span></a>
+</li>
+<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Students.ManageStudents', 'admin.Students.RegisterStudents']) ? 'active' : '' }} ">
+    <a class="nav-link" href="{{route('admin.Subjects.ManageSubjects')}}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Subject Management</span></a>
+</li>
 
 
 <!-- Nav Item - Utilities Collapse Menu -->

@@ -46,11 +46,11 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Subject::class);
     }
-    public function grades()
-    {
-        return $this->belongsToMany(Grade::class);
-    }
-
+    // public function grades()
+    // {
+    //     return $this->belongsToMany(Grade::class);
+    // }
+    
     /**
      * The attributes that should be cast.
      *

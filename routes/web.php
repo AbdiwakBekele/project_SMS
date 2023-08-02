@@ -47,16 +47,29 @@ Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function(){
             
 
             // Gradesssss
-            Route::get('/classSections',[ClassSectionController::class,'index'])->name('ClassSectionManagement')->middleware('role:admin');
+            Route::get('/classSections',[ClassSectionController::class,'index'])->name('ClassSection.ClassSectionManagement')->middleware('role:admin');
             Route::get('/addGrades',[ClassSectionController::class,'createGrade'])->name('AddingGrades');
             Route::post('/grades',[ClassSectionController::class,'storeGrade'])->name('AddGrades');
             Route::get('grades/{grade_id}/delete',[ClassSectionController::class,'destroyGrade']);
 
             // subjectssss
-            Route::get('/subjects',[SubjectController::class,'index'])->name('Subject.SubjectManagement');
-            Route::get('/addSubjects',[SubjectController::class,'create'])->name('AddingSubjects');
+            Route::get('/subjects',[SubjectController::class,'index'])->name('Subjects.ManageSubjects');
+            Route::get('/assignSubjects',[SubjectController::class,'assignForGrade'])->name('subjects.AssignForClass');
+            Route::get('/assignSubjectsForTeacher',[SubjectController::class,'assignForTeacher'])->name('subjects.AssignForTeacher');
+            Route::get('/addSubjects',[SubjectController::class,'create'])->name('subjects.create');
+            Route::post('/subject',[SubjectController::class,'store'])->name('AddSubjects');
+            
+            Route::post('/AssignForGrade',[SubjectController::class,'assignSubjects'])->name('AssignSubjectsForGrade');
+            Route::post('/AssignForTeacher',[SubjectController::class,'assignSubjectsForTeacher'])->name('AssignSubjectsForTeacher');
 
 
+            
+            
+
+
+
+            // vdhsfbsaikj
+          
 
 
             // Sectionsssss
