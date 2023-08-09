@@ -22,34 +22,34 @@
 <li class="nav-item {{ in_array(request()->route()->getName(), ['admin.RPmanagement', 'admin.createRole', 'admin.createPermission','admin.editrole','admin.editpermission']) ? 'active' : '' }}">
 
     <a class="nav-link" href="{{route('admin.RPmanagement')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-tasks"></i>
         <span>Roles and Permissions</span></a>
 </li>
 <li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Parents.ManageParents', 'admin.Parents.RegisterParents']) ? 'active' : '' }} ">
 
     <a class="nav-link" href="{{route('admin.Parents.ManageParents')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-user"></i>
         <span>Parent Management</span></a>
 </li>
 <li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Staff.ManageUsers', 'admin.Staff.RegisterUsers']) ? 'active' : '' }} ">
     <a class="nav-link" href="{{route('admin.Staff.ManageUsers')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-user"></i>
         <span>Staff Management</span></a>
 </li>
 
 <li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Students.ManageStudents', 'admin.Students.RegisterStudents']) ? 'active' : '' }} ">
     <a class="nav-link" href="{{route('admin.Students.ManageStudents')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw-2x fa-child"></i>
         <span>Student Management</span></a>
 </li>
-<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Students.ManageStudents', 'admin.Students.RegisterStudents']) ? 'active' : '' }} ">
+<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.AddingSections', 'admin.AddingGrades','admin.ClassSection.ClassSectionManagement']) ? 'active' : '' }} ">
     <a class="nav-link" href="{{route('admin.ClassSection.ClassSectionManagement')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>ClassSection Management</span></a>
+        <i class="fas fa-fw fa-school"></i>
+        <span>Class Section Management</span></a>
 </li>
-<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Students.ManageStudents', 'admin.Students.RegisterStudents']) ? 'active' : '' }} ">
+<li class="nav-item {{ in_array(request()->route()->getName(), ['admin.Subjects.ManageSubjects','admin.subjects.create', 'admin.subjects.AssignForClass','admin.subjects.AssignForTeacher']) ? 'active' : '' }} ">
     <a class="nav-link" href="{{route('admin.Subjects.ManageSubjects')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-book-open"></i>
         <span>Subject Management</span></a>
 </li>
 

@@ -1,19 +1,37 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-  <div class="row ms-5 col-6 mt-5">
-  <a class="link-opacity-10 mt-3" href="{{route('admin.subjects.create')}}"> <button type="button" class="btn btn-primary">Add Subjects</button></a>
-  <a class="link-opacity-10 mt-3" href="{{route('admin.subjects.AssignForClass')}}"> <button type="button" class="btn btn-primary">Assign Subject to Class</button></a>
+@extends('admin.admin_sidebar')
 
-  <a class="link-opacity-10 mt-3" href="{{route('admin.subjects.AssignForTeacher')}}"> <button type="button" class="btn btn-primary">Assign Subject to Teachers</button></a>
 
-        <table class="table border border-2 mt-3">
+
+@section('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+@endsection
+@section('section')
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="title h1">Subject Management</div>
+  </div>
+
+  <div class="row ms-4 mt-5">
+
+
+    
+
+
+    <!-- permission -->
+
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <div class="btn btn-secondary disabled">Subject List</div>
+          
+        </div>
+        <div class="col-12">
+
+          <table class="table">
+          
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -36,7 +54,52 @@
             
 
           </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
+    <div class="offset-1 col-md-5">
+      <div class="row d-flex justify-content-between">
+        <div class="col-12  mb-3 w-100">
+        <a  href="{{route('admin.subjects.create')}}"> <button type="button" class="btn btn-primary">Add Subjects</button></a>
+        </div>
+        <div class="col-12  mb-3 w-100">
+        <a class="" href="{{route('admin.subjects.AssignForClass')}}"> <button type="button" class="btn btn-primary">Assign Subject to Class</button></a>
+        </div>
+        <div class="col-12  mb-3 w-100">
+        <a  href="{{route('admin.subjects.AssignForTeacher')}}"> <button type="button" class="btn btn-primary">Assign Subject to Teachers</button></a>
+        </div>
+
+      </div></div>
+    <!-- <div class>
+      </div> -->
+
+  </div>
+
 </div>
-  </body>
-</html>
+@endsection
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+@endsection
